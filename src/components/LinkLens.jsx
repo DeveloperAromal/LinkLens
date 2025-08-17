@@ -52,7 +52,7 @@ export default function LinkLens({content, highlightLink = true, previewCard = f
     
     return  (
         <div className={`${classname}`}>
-            <div
+            <div style="margin-bottom:10px;"
                 dangerouslySetInnerHTML={{ __html: highlightedLinkContent }}
             >
             </div>

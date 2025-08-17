@@ -1,6 +1,6 @@
 {
   "name": "linklens",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "LinkLens is a lightweight package that detects links inside comments or chat messages, highlights them, and optionally generates rich previews with thumbnails, titles, and descriptions.",
   "main": "dist/main.js",
   "type": "module",
