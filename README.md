@@ -37,12 +37,18 @@ export default function Example() {
 
 ## Props
 
-| Prop          | Type      | Default   | Description |
-|---------------|----------|-----------|-------------|
-| `content`     | `string` | `""`      | The text that may contain URLs (e.g. `"Check this https://example.com"`) |
-| `highlightLink` | `boolean` | `true` | Highlights the link text inside the content |
-| `previewCard` | `boolean` | `false` | Shows a preview card with title, description, and image |
-| `linkColor`   | `string` | `"blue"` | CSS color for highlighted links |
+| Prop             | Type      | Default     | Description |
+|-----------------|-----------|------------|-------------|
+| `content`        | `string`  | `""`       | The text that may contain URLs (e.g. `"Check this https://example.com"`) |
+| `highlightLink`  | `boolean` | `true`     | Highlights the link text inside the content |
+| `previewCard`    | `boolean` | `false`    | Shows a preview card with title, description, and image |
+| `linkColor`      | `string`  | `"blue"`   | CSS color for highlighted links |
+| `classname`      | `string`  | `""`       | Additional CSS classes to apply to the container |
+| `hoverPreview`   | `boolean` | `false`    | Shows link preview on hover |
+| `pattern`        | `string`  | `""`       | Custom regex pattern to match links or text |
+| `tag`            | `string`  | `"a"`      | HTML tag to wrap matched content |
+| `customRegex`    | `boolean` | `false`    | Enables using the custom regex pattern |
+| `customTagColor` | `string`  | `""`       | Color for text wrapped with the custom tag |
 
 ---
 

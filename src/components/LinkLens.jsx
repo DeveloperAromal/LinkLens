@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import { getPreviewData } from "./utils/previewFetcher.js";
 import { extractLink } from "./utils/LinkExtractor";
 import { HighlightedContent } from "./utils/linkHighlighter";
+import { applyCustomRegex } from "./utils/CustomRegex.js";
 
 import "../index.css"
 
-export default function LinkLens({content, highlightLink = true, previewCard = false, linkColor = "#1d4ed8", classname, hoverPreview = false}) {
+export default function LinkLens({content, highlightLink = true, previewCard = false, linkColor = "#1d4ed8", classname, hoverPreview = false, pattern, tag, customRegex = false, customTagColor}) {
 
     const [previewData, setPreviewData] = useState(null);
 
-
     const url = extractLink(content)
 
-
+    const customContent = applyCustomRegex(content, pattern, tag, customTagColor)
 
     useEffect(() => {
         if (!previewCard || !url) {
@@ -50,18 +50,25 @@ export default function LinkLens({content, highlightLink = true, previewCard = f
     };
     
     return  (
-        <div className={`${classname}`}>
+         <div className={`${classname}`}>
             <div style={{ marginBottom: "10px" }}>
-                {content && (
-                    <HighlightedContent
-                        content={content}
-                        linkColor={linkColor}
-                        highlightLink={highlightLink}
-                        hoverPreview={hoverPreview}
+                {content &&
+                (customRegex ? (
+                    <div
+                    className="custom-regex-content"
+                    dangerouslySetInnerHTML={{ __html: customContent }}
                     />
-                )}
+                ) : (
+                    <HighlightedContent
+                    content={content}
+                    linkColor={linkColor}
+                    highlightLink={highlightLink}
+                    hoverPreview={hoverPreview}
+                    />
+                ))}
             </div>
-            {previewCard && renderPreviewCard()}
-        </div>
+
+      {previewCard && renderPreviewCard()}
+    </div>
     )
 }
