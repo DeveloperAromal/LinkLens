@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { getPreviewData } from "./utils/previewFetcher";
+import { getPreviewData } from "./utils/previewFetcher.js";
 import { extractLink } from "./utils/LinkExtractor";
-import { highlightLinks as  highlightLinkfn} from "./utils/linkHighlighter";
+import { HighlightedContent } from "./utils/linkHighlighter";
 
 import "../index.css"
 
-export default function LinkLens({content, highlightLink = true, previewCard = false, linkColor = "#1d4ed8", classname}) {
+export default function LinkLens({content, highlightLink = true, previewCard = false, linkColor = "#1d4ed8", classname, hoverPreview = false}) {
 
     const [previewData, setPreviewData] = useState(null);
 
-    const highlightedLinkContent = content ? highlightLinkfn(content, linkColor, highlightLink) : "";
 
     const url = extractLink(content)
 
@@ -52,9 +51,15 @@ export default function LinkLens({content, highlightLink = true, previewCard = f
     
     return  (
         <div className={`${classname}`}>
-            <div style="margin-bottom:10px;"
-                dangerouslySetInnerHTML={{ __html: highlightedLinkContent }}
-            >
+            <div style={{ marginBottom: "10px" }}>
+                {content && (
+                    <HighlightedContent
+                        content={content}
+                        linkColor={linkColor}
+                        highlightLink={highlightLink}
+                        hoverPreview={hoverPreview}
+                    />
+                )}
             </div>
             {previewCard && renderPreviewCard()}
         </div>

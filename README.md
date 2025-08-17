@@ -61,3 +61,5 @@ See the [LICENSE](./LICENSE) file for details.
 ---
 
 MIT License © 2025 Aromal
+
+```
