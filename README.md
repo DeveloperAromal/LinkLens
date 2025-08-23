@@ -50,6 +50,7 @@ export default function LinkHighlight() {
 }
 
 ```
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fut5w47bgehxeg45h06z.png)
 
 ### 2. Custom Link Color
 
@@ -71,8 +72,7 @@ export default function CustomLinkColor() {
 }
 
 ```
-
-
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6njeest80cgnciy4r7gc.png)
 
 ### 3. Rich Preview Card
 
@@ -93,7 +93,7 @@ export default function RichCardPreview() {
 }
 
 ```
-
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/zo8f6bqa80923mvv3uh7.png)
 
 ### 4. Hover Preview
 
@@ -114,6 +114,7 @@ export default function HoverPreview() {
 }
 
 ```
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6f27tjed8web0e459ifu.png)
 
 ### 5. Custom Regex Pattern
 
@@ -138,6 +139,7 @@ export default function CustomRegexPattern() {
 
 ```
 
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/z3c66g4fct4cxu7lp4sj.png)
 
 ### 6. Using a Custom Container Class
 
