@@ -1,7 +1,7 @@
 {
   "name": "linklens",
-  "version": "1.0.8",
-  "description": "LinkLens is a lightweight package that detects links inside comments or chat messages, highlights them, and optionally generates rich previews with thumbnails, titles, and descriptions.",
+  "version": "1.0.11",
+  "description": "LinkLens is a lightweight React package to detect, highlight, and preview URLs, links, mentions, and hashtags in text. Supports rich link previews with thumbnails, titles, descriptions, and metadata.",
   "main": "dist/main.js",
   "type": "module",
   "scripts": {
@@ -9,18 +9,33 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Aromal",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeveloperAromal/linklens"
+  },
+  "homepage": "https://github.com/DeveloperAromal/linklens#readme",
   "keywords": [
+    "linklens",
     "link",
-    "link-preview",
     "url",
+    "link-preview",
     "highlight-link",
     "react",
     "react-component",
     "rich-preview",
     "thumbnail",
     "open-graph",
-    "metadata"
+    "metadata",
+    "npm",
+    "react-link-preview",
+    "react-url-parser",
+    "link-detection",
+    "social-preview",
+    "chat-link-preview",
+    "npm-react-component",
+    "hashtags",
+    "mentions"
   ],
   "dependencies": {},
   "devDependencies": {
@@ -36,5 +51,10 @@
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
-  }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
 }
